@@ -1,0 +1,24 @@
+{
+  "name": "typescript-with-server",
+  "version": "0.0.0",
+  "description": "A little template to create Discord Bots with an internal RESTful server that's expose some configuration and statistics endpoints.",
+  "main": "dist/index.js",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "keywords": [
+    "discord-bot",
+    "typescript",
+    "fastify"
+  ],
+  "author": {
+    "email": "freitaseric@proton.me",
+    "name": "Eric Freitas",
+    "url": "https://github.com/freitaseric"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  }
+}
