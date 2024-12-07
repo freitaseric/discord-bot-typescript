@@ -4,9 +4,7 @@
   "description": "A little template to create Discord Bots with an internal RESTful server that's expose some configuration and statistics endpoints.",
   "main": "dist/index.js",
   "packageManager": "pnpm@9.15.0",
-  "scripts": {
-    "prepare": "husky"
-  },
+  "scripts": {},
   "keywords": [
     "discord-bot",
     "typescript",

@@ -1,8 +1,0 @@
-biome lint --staged --write
-biome format --staged --write
-
-pnpm test
-
-git update-index --again
-
-exit 1
