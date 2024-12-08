@@ -1,29 +1,29 @@
 {
-  "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.codeActionsOnSave": {
-      "quickfix.biome": "always",
-      "source.organizeImports": "always"
-    }
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.codeActionsOnSave": {
-      "quickfix.biome": "always",
-      "source.organizeImports": "always"
-    }
-  },
-  "files.readonlyInclude": {
-    "node_modules/**": true,
-    "dist/**": true,
-    "src/types/**": true,
-    "src/app/bootstrap.ts": true,
-    "src/database/index.ts": true,
-    "src/server/bootstrap.ts": true,
-    "src/utils/**": true
-  }
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"editor.codeActionsOnSave": {
+			"quickfix.biome": "always",
+			"source.organizeImports": "always"
+		}
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"editor.codeActionsOnSave": {
+			"quickfix.biome": "always",
+			"source.organizeImports": "always"
+		}
+	},
+	"files.readonlyInclude": {
+		"node_modules/**": true,
+		"dist/**": true,
+		"src/types/**": true,
+		"src/app/bootstrap.ts": true,
+		"src/database/index.ts": true,
+		"src/server/bootstrap.ts": true,
+		"src/utils/**": true
+	}
 }

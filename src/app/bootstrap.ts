@@ -189,7 +189,7 @@ export default async () => {
 		}
 	})
 
-	client.on("error", (error) => onError(error))
+	client.on('error', error => onError(error))
 
 	try {
 		await client.login(process.env.DISCORD_TOKEN)

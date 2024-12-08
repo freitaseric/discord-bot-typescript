@@ -1,39 +1,35 @@
 {
-  "name": "typescript-with-server",
-  "version": "0.0.0",
-  "description": "A little template to create Discord Bots with an internal RESTful server that's expose some configuration and statistics endpoints.",
-  "main": "dist/index.js",
-  "packageManager": "pnpm@9.15.0",
-  "scripts": {
-    "dev": "tsx ./src/index.ts",
-    "dev:watch": "tsx --watch ./src/index.ts",
-    "build": "rm -rf dist/ && tsc && tsc-alias"
-  },
-  "keywords": [
-    "discord-bot",
-    "typescript",
-    "fastify"
-  ],
-  "author": {
-    "email": "freitaseric@proton.me",
-    "name": "Eric Freitas",
-    "url": "https://github.com/freitaseric"
-  },
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@types/node": "^22.10.1",
-    "tsc-alias": "^1.8.10",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
-  },
-  "dependencies": {
-    "better-sqlite3": "^11.7.0",
-    "discord.js": "^14.16.3",
-    "dotenv": "^16.4.7",
-    "fastify": "^5.1.0",
-    "fastify-plugin": "^5.0.1",
-    "loggings": "^1.6.0",
-    "quick.db": "^9.1.7"
-  }
+	"name": "typescript-with-server",
+	"version": "0.0.0",
+	"description": "A little template to create Discord Bots with an internal RESTful server that's expose some configuration and statistics endpoints.",
+	"main": "dist/index.js",
+	"packageManager": "pnpm@9.15.0",
+	"scripts": {
+		"dev": "tsx ./src/index.ts",
+		"dev:watch": "tsx --watch ./src/index.ts",
+		"build": "rm -rf dist/ && tsc && tsc-alias"
+	},
+	"keywords": ["discord-bot", "typescript", "fastify"],
+	"author": {
+		"email": "freitaseric@proton.me",
+		"name": "Eric Freitas",
+		"url": "https://github.com/freitaseric"
+	},
+	"license": "Apache-2.0",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^22.10.1",
+		"tsc-alias": "^1.8.10",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"better-sqlite3": "^11.7.0",
+		"discord.js": "^14.16.3",
+		"dotenv": "^16.4.7",
+		"fastify": "^5.1.0",
+		"fastify-plugin": "^5.0.1",
+		"loggings": "^1.6.0",
+		"quick.db": "^9.1.7"
+	}
 }
