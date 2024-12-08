@@ -1,8 +1,8 @@
 node_modules/
 dist/
+logs/
 
-
-*.log
+*.sqlite
 
 .env*
 !.env-example
