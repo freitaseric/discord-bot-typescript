@@ -1,5 +1,5 @@
+import colors from '@/libs/colors'
 import { Event } from '@/types/app.d'
-import colors from '@/utils/colors'
 import { EmbedBuilder } from 'discord.js'
 
 export default new Event({

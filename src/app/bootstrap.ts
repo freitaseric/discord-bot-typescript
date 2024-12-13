@@ -4,8 +4,8 @@ import type {
 	ComponentsModal,
 	ComponentsSelect,
 	EventType,
-} from '@/types/app.d'
-import { onError } from '@/utils/error'
+} from '#app'
+import { onError } from '@libs/error'
 import {
 	ActivityType,
 	type ApplicationCommandDataResolvable,

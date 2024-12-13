@@ -1,4 +1,4 @@
-import type db from '@/database/index'
+import type db from '@database/index'
 import type { Client } from 'discord.js'
 
 declare global {

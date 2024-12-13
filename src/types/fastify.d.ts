@@ -1,6 +1,5 @@
-import type { Client } from 'discord.js'
+import type database from '@database/index'
 import 'fastify'
-import type database from '../database'
 
 declare module 'fastify' {
 	interface FastifyInstance {

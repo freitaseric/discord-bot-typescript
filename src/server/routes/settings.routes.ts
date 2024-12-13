@@ -1,4 +1,4 @@
-import type { ISettingsGuild } from '@/database/models/settings/Settings.model'
+import type { ISettingsGuild } from '@database/models/settings/Settings.model'
 import type { FastifyInstance } from 'fastify'
 
 export default async (server: FastifyInstance) => {

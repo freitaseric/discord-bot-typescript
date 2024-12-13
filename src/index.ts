@@ -1,9 +1,9 @@
-import '@/database/index'
-import '@/utils/error'
-import '@/utils/logger'
+import bootstrapApp from '#app/boostrap'
+import bootstrapServer from '#fastify/bootstrap'
+import '@database/index'
+import '@libs/error'
+import '@libs/logger'
 import dotenv from 'dotenv'
-import bootstrapApp from './app/bootstrap'
-import bootstrapServer from './server/bootstrap'
 
 dotenv.config()
 bootstrapApp().then(() => bootstrapServer())

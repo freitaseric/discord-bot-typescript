@@ -5,8 +5,6 @@ Este é um template para a criação de bots do discord usando as linguagens Typ
 
 <!-- omit in toc -->
 ## Sumário
-- [Como usar?](#como-usar)
-- [Documentação](#documentação)
 - [Recursos](#recursos)
   - [`client` global](#client-global)
   - [`database` global](#database-global)
@@ -15,20 +13,6 @@ Este é um template para a criação de bots do discord usando as linguagens Typ
   - [Manipulador de Botões, Menus de Seleção e Modais](#manipulador-de-botões-menus-de-seleção-e-modais)
   - [API RESTful em Fastify](#api-restful-em-fastify)
   - [Banco de dados](#banco-de-dados)
-- [Autor](#autor)
-- [Licença](#licença)
-
-## Como usar?
-
-Para utilizar este modelo para criar seus próprios bots basta clonar este repositório em sua máquina e começar a programar.
-
-```bash
-git clone https://github.com/freitaseric/discord-bot-typescript --depth=1
-```
-
-## Documentação
-
-Acesse a documentação do projeto em [freitaseric.github.io/discord-bot-typescript](https://freitaseric.github.io/discord-bot-typescript) ou pelos arquivos locais clicando [aqui](./docs/index.md).
 
 ## Recursos
 
@@ -85,7 +69,7 @@ export default new Command({
 ```
 
 > [!TIP]
-> Para mais informações acesse a página de [referência à comandos](./docs/reference/commands.md) na documentação.
+> Para mais informações acesse a página de [referência à comandos](./reference/commands.md) na documentação.
 
 ### Manipulador de Eventos
 
@@ -99,18 +83,18 @@ import { Event } from '@/types/app.d'
 import { inlineCode } from 'discord.js'
 
 export default new Event({
-  name: 'guildMemberAdd',
-  run: async member => {
-    member.user.send(
-      `Boas Vindas ao servidor ${inlineCode(member.displayName)}`,
-    )
-  },
+	name: 'guildMemberAdd',
+	run: async member => {
+		member.user.send(
+			`Boas Vindas ao servidor ${inlineCode(member.displayName)}`,
+		)
+	},
 })
 
 ```
 
 > [!TIP]
-> Para mais informações acesse a página de [referência à eventos](./docs/reference/events.md) na documentação.
+> Para mais informações acesse a página de [referência à eventos](./reference/events.md) na documentação.
 
 ### Manipulador de Botões, Menus de Seleção e Modais
 
@@ -122,47 +106,47 @@ Para criar um componente basta definir a propriedade equivalente ao componente d
 ```typescript
 import { Command } from '#app'
 import {
-  ActionRowBuilder,
-  ButtonBuilder,
-  ButtonStyle,
-  Collection,
+	ActionRowBuilder,
+	ButtonBuilder,
+	ButtonStyle,
+	Collection,
 } from 'discord.js'
 
 export default new Command({
-  name: 'button',
-  description: 'Comando com botão',
-  run: async ({ interaction }) => {
-    const row = new ActionRowBuilder<ButtonBuilder>({
-      components: [
-        new ButtonBuilder({
-          customId: 'sayHello',
-          emoji: '👋',
-          label: 'Dizer "Olá"',
-          style: ButtonStyle.Premium,
-        }),
-      ],
-    })
+	name: 'button',
+	description: 'Comando com botão',
+	run: async ({ interaction }) => {
+		const row = new ActionRowBuilder<ButtonBuilder>({
+			components: [
+				new ButtonBuilder({
+					customId: 'sayHello',
+					emoji: '👋',
+					label: 'Dizer "Olá"',
+					style: ButtonStyle.Premium,
+				}),
+			],
+		})
 
-    await interaction.reply({
-      content: 'Clique para dizer "Olá"!',
-      components: [row],
-    })
-  },
-  buttons: new Collection([
-    [
-      'sayHello',
-      async interaction => {
-        await interaction.reply(`Olá ${interaction.user.displayName}`)
-      },
-    ],
-  ]),
+		await interaction.reply({
+			content: 'Clique para dizer "Olá"!',
+			components: [row],
+		})
+	},
+	buttons: new Collection([
+		[
+			'sayHello',
+			async interaction => {
+				await interaction.reply(`Olá ${interaction.user.displayName}`)
+			},
+		],
+	]),
 })
 
 
 ```
 
 > [!TIP]
-> Para mais informações acesse a página de [referência à componentes](./docs/reference/components.md) na documentação.
+> Para mais informações acesse a página de [referência à componentes](./reference/components.md) na documentação.
 
 ### API RESTful em Fastify
 
@@ -176,10 +160,10 @@ A raiz do servidor encontra-se em `src/server` e você pode definir suas rodas c
 import type { FastifyInstance } from 'fastify'
 
 export default async (server: FastifyInstance) => {
-  server.get('/', async (_, reply) => {
-    reply.type('text/plain').status(200)
-    return 'Rota customizada!'
-  })
+	server.get('/', async (_, reply) => {
+		reply.type('text/plain').status(200)
+		return 'Rota customizada!'
+	})
 }
 ```
 
@@ -193,7 +177,7 @@ fastify.register(customRoutes, { prefix: 'custom' })
 ```
 
 > [!TIP]
-> Para mais informações acesse a página de [referência ao _web server_](./docs/reference/server.md) na documentação.
+> Para mais informações acesse a página de [referência ao _web server_](./reference/server.md) na documentação.
 
 ### Banco de dados
 
@@ -214,17 +198,9 @@ export interface IGuild {
 }
 
 export default new QuickDB<IGuild>({
-  filePath: path.resolve(__dirname, 'guilds.sqlite'),
+	filePath: path.resolve(__dirname, 'guilds.sqlite'),
 })
 ```
 
 > [!TIP]
-> Para mais informações acesse a página de [referência ao banco de dados](./docs/reference/database.md) na documentação.
-
-## Autor
-
-- [@freitaseric](https://github.com/freitaseric) - criador e mantenedor
-
-## Licença
-
-Este projeto está protegido sob licença [Apache 2.0](./LICENSE).
+> Para mais informações acesse a página de [referência ao banco de dados](./reference/database.md) na documentação.

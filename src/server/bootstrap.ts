@@ -1,14 +1,10 @@
 import Fastify from 'fastify'
-import indexRoutes from './routes/index.routes'
-import settingsRoutes from './routes/settings.routes'
-import statisticsRoutes from './routes/statistics.routes'
+import routesRegister from './routesRegister'
 
 export default () => {
 	const server = Fastify()
 
-	server.register(indexRoutes)
-	server.register(settingsRoutes, { prefix: 'settings' })
-	server.register(statisticsRoutes, { prefix: 'statistics' })
+	server.register(routesRegister)
 
 	server.listen(
 		{ host: process.env.HOST ?? '0.0.0.0', port: process.env.PORT ?? 8080 },
